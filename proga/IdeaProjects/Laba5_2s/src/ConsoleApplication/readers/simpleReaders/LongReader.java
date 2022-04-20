@@ -4,34 +4,29 @@ import ConsoleApplication.InputManager;
 import ConsoleApplication.OutputManager;
 import ConsoleApplication.readers.ValueFormatException;
 
-public class IntegerReader extends NumberReader<Integer>{
+public class LongReader extends NumberReader<Long> {
 
-    public IntegerReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
+    public LongReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
         super(inputManager, outputManager, canBeNull);
     }
 
-    public IntegerReader(InputManager inputManager, OutputManager outputManager) {
-        super(inputManager, outputManager);
-    }
-
     @Override
-    protected int compareValues(Integer t1, Integer t2) {
+    protected int compareValues(Long t1, Long t2) {
         return t1.compareTo(t2);
     }
 
     @Override
-    protected Integer parseValue(String argument) throws ValueFormatException {
+    protected Long parseValue(String argument) throws ValueFormatException {
         try {
-            return Integer.parseInt(argument);
+            return Long.parseLong(argument);
         } catch (Exception e) {
             throw new ValueFormatException("Некорректный формат числа");
         }
     }
 
-    public IntegerReader setLowerBound(Integer lowerBound) {
+    @Override
+    public NumberReader<Long> setLowerBound(Long lowerBound) {
         super.setLowerBound(lowerBound);
         return this;
     }
-
-
 }

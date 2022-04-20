@@ -13,23 +13,6 @@ public class Person {
     private Country nationality; //Поле не может быть null
     private Location location; //Поле может быть null
 
-    public class Coordinates {
-        private Long x; //Значение поля должно быть больше -33, Поле не может быть null
-        private Integer y; //Поле не может быть null
-
-        public Coordinates(Long x, Integer y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
-    public class Location {
-        private Long x; //Поле не может быть null
-        private int y;
-        private double z;
-        private String name; //Длина строки не должна быть больше 942, Поле не может быть null
-    }
-
     @Override
     public String toString() {
         return "Person{" +
