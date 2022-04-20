@@ -1,23 +1,19 @@
 package ConsoleApplication;
 
+import ConsoleApplication.readers.simpleReaders.IntegerReader;
+
 import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void f() {
-        f(false);
-    }
 
-    public static void f(boolean ask){
-        if (ask){
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
-    }
+    public static void main(String[] args) {
+        InputManager im= new InputManager();
+        OutputManager om = new OutputManager();
+        IntegerReader a = new IntegerReader(im, om);
+        Integer integer = a.read("число типа");
+        System.out.println(integer);
 
-    public static void main(String[] args) throws IOException {
-        f();
-        f(true);
+
     }
 }

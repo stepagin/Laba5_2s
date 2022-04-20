@@ -36,20 +36,22 @@ public class InputManager {
     }
 
     public String readNext(){
-        StringBuilder stringBuilder = new StringBuilder();
+//        StringBuilder stringBuilder = new StringBuilder();
         try {
-            while (true) {
-                if (readMode == ReadMode.file && !hasNext()) break;
-                char c = reader.readChar();
-                if (c == '\r') continue;
-                if (c == '\n') break;
-                if (stringBuilder.length() != 0 && Character.isWhitespace(c)) break;
-                stringBuilder.append(c);
-            }
+//            while (true) {
+//                if (readMode == ReadMode.file && !hasNext()) break;
+//                char c = reader.readChar();
+//                if (c == '\r') continue;
+//                if (c == '\n') break;
+//                if (stringBuilder.length() != 0 && Character.isWhitespace(c)) break;
+//                stringBuilder.append(c);
+//            }
+            return reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return stringBuilder.toString();
+//        return stringBuilder.toString();
+        return null;
     }
 
     public String readAllFile() throws IOException {
