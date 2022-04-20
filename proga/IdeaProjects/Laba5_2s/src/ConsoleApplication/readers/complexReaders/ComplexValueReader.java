@@ -10,7 +10,7 @@ import ConsoleApplication.readers.ValueReader;
  * Класс для определения правил считывания сложных значений,
  * состоящих из нескольких простых.
  */
-public abstract class ComplexValueReader<T> extends ValueReader {
+public abstract class ComplexValueReader<T> extends ValueReader<T> {
     public ComplexValueReader(InputManager inputManager, OutputManager outputManager) {
         super(inputManager, outputManager);
     }
@@ -20,7 +20,7 @@ public abstract class ComplexValueReader<T> extends ValueReader {
     }
 
     @Override
-    protected Object parse(String argument) throws ValueFormatException {
+    protected T parse(String argument) throws ValueFormatException {
         if (argument.equals(getTypeName())) {
             return readFields();
         } else {

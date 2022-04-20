@@ -1,5 +1,8 @@
 package ConsoleApplication.person;
+import ConsoleApplication.person.eye.Color;
+
 import java.lang.*;
+import java.time.LocalDate;
 
 
 public class Person {
@@ -12,6 +15,20 @@ public class Person {
     private ConsoleApplication.person.hair.Color hairColor; //Поле не может быть null
     private Country nationality; //Поле не может быть null
     private Location location; //Поле может быть null
+
+    public Person(int id, String name, Coordinates coordinates, java.time.ZonedDateTime creationDate, Long height,
+                  ConsoleApplication.person.eye.Color eyeColor, ConsoleApplication.person.hair.Color hairColor,
+                  Country nationality, Location location) {
+        this.id = id;
+        this.name = name;
+        this.coordinates = coordinates;
+        this.creationDate = creationDate;
+        this.height = height;
+        this.eyeColor = eyeColor;
+        this.hairColor = hairColor;
+        this.nationality = nationality;
+        this.location = location;
+    }
 
     @Override
     public String toString() {

@@ -1,5 +1,7 @@
 package ConsoleApplication;
 
+import ConsoleApplication.person.Person;
+import ConsoleApplication.readers.complexReaders.PersonReader;
 import ConsoleApplication.readers.simpleReaders.IntegerReader;
 
 import java.io.*;
@@ -10,9 +12,9 @@ public class Main {
     public static void main(String[] args) {
         InputManager im= new InputManager();
         OutputManager om = new OutputManager();
-        IntegerReader a = new IntegerReader(im, om);
-        Integer integer = a.read("число типа");
-        System.out.println(integer);
+        PersonReader pr = new PersonReader(im, om);
+        Person p = new PersonReader(im, om).read("человека в формате");
+        System.out.println(p.toString());
 
 
     }

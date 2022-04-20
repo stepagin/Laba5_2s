@@ -7,18 +7,18 @@ import ConsoleApplication.person.Person;
 import ConsoleApplication.readers.simpleReaders.IntegerReader;
 import ConsoleApplication.readers.simpleReaders.LongReader;
 
-public class CoordinatesReader extends ComplexValueReader{
+public class CoordinatesReader extends ComplexValueReader<Coordinates> {
 
     public CoordinatesReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
         super(inputManager, outputManager, canBeNull);
     }
 
     @Override
-    protected Object readFields() {
+    protected Coordinates readFields() {
         Long x = new LongReader(inputManager, outputManager, false)
-                .setLowerBound((long) -33).read();
+                .setLowerBound((long) -33).read("координата х");
         Integer y = new IntegerReader(inputManager, outputManager, false)
-                .read();
+                .read("координата у");
         return new Coordinates(x, y);
     }
 

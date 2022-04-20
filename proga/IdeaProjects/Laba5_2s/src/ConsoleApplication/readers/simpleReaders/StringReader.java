@@ -6,6 +6,7 @@ import ConsoleApplication.readers.ValueFormatException;
 
 public class StringReader extends SimpleValueReader<String> {
     boolean canBeEmpty = true;
+    private Integer lengthUpperBound = null;
 
     public StringReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
         super(inputManager, outputManager, canBeNull);
@@ -16,6 +17,9 @@ public class StringReader extends SimpleValueReader<String> {
         if (!canBeEmpty && argument.trim().isEmpty()){
             throw new ValueFormatException("Эта строка не может быть пустой");
         }
+        if (lengthUpperBound != null && Integer.compare(argument.length(), lengthUpperBound) < 1) {
+            throw new ValueFormatException("Длина строки не должна быть больше 942");
+        }
         return argument;
     }
 
@@ -25,6 +29,15 @@ public class StringReader extends SimpleValueReader<String> {
 
     public StringReader setCanBeEmpty(boolean canBeEmpty) {
         this.canBeEmpty = canBeEmpty;
+        return this;
+    }
+
+    public Integer getLengthUpperBound() {
+        return lengthUpperBound;
+    }
+
+    public StringReader setLengthUpperBound(Integer lengthUpperBound) {
+        this.lengthUpperBound = lengthUpperBound;
         return this;
     }
 }

@@ -6,8 +6,11 @@ import ConsoleApplication.readers.ValueFormatException;
 
 public class DoubleReader extends  NumberReader<Double> {
 
+    public DoubleReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
+        super(inputManager, outputManager, canBeNull);
+    }
     public DoubleReader(InputManager inputManager, OutputManager outputManager) {
-        super(inputManager, outputManager, true);
+        this(inputManager, outputManager, true);
     }
 
     @Override
