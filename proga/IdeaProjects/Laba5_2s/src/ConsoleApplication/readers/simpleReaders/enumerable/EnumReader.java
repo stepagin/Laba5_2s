@@ -17,7 +17,7 @@ public abstract class EnumReader<T extends Enum<T>> extends SimpleValueReader<T>
         try {
             return valueOf(argument);
         } catch (Exception e) {
-            throw new ValueFormatException("Некорректное значение.");
+            throw new ValueFormatException("Некорректное значение. " + getFieldNames());
         }
     }
 

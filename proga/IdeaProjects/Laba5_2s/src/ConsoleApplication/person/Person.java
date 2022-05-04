@@ -1,12 +1,12 @@
 package ConsoleApplication.person;
 import ConsoleApplication.person.eye.Color;
 
+import java.io.Serializable;
 import java.lang.*;
-import java.time.LocalDate;
 
 
-public class Person {
-    private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+public class Person implements Comparable<Person>, Serializable {
+    private Integer id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
     private java.time.ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
@@ -30,18 +30,59 @@ public class Person {
         this.location = location;
     }
 
+    public String convertToCSV() {
+        return "" + id + ';' + name + ';' + coordinates.toString() + ';' + creationDate + ';' +
+                height + ';' + eyeColor + ';' + hairColor + ';' + nationality + ';' + location.toString();
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", coordinates=" + coordinates +
+                ", coordinates=" + coordinates.toString() +
                 ", creationDate=" + creationDate +
                 ", height=" + height +
                 ", eyeColor=" + eyeColor +
                 ", hairColor=" + hairColor +
                 ", nationality=" + nationality +
-                ", location=" + location +
+                ", location=" + location.toString() +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (o == null) {
+            return 1;
+        } else if (!(id.equals(o.id))) {
+            return id.compareTo(o.id);
+        } else if (!name.equals(o.name)) {
+            return name.compareTo(o.name);
+        } else if (!coordinates.equals(o.coordinates)) {
+            return Coordinates.compare(coordinates, o.coordinates);
+        } else if (!creationDate.equals(o.creationDate)) {
+            return creationDate.compareTo(o.creationDate);
+        } else if (!height.equals(o.height)) {
+            return height.compareTo(o.height);
+        } else if (!eyeColor.equals(o.eyeColor)) {
+            return eyeColor.compareTo(o.eyeColor);
+        } else if (!hairColor.equals(o.hairColor)) {
+            return hairColor.compareTo(o.hairColor);
+        } else if (!nationality.equals(o.nationality)) {
+            return nationality.compareTo(o.nationality);
+        } else
+            return Location.compare(location, o.location);
+    }
+
+    public Color getEyeColor() {
+        return eyeColor;
+    }
+
+    public String getName() {
+        return name;
     }
 }

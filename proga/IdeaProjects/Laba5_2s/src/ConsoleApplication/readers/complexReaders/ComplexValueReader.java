@@ -20,12 +20,13 @@ public abstract class ComplexValueReader<T> extends ValueReader<T> {
     }
 
     @Override
+    public T read(String fieldName) {
+        return super.read(fieldName);
+    }
+
+    @Override
     protected T parse(String argument) throws ValueFormatException {
-        if (argument.equals(getTypeName())) {
-            return readFields();
-        } else {
-            throw new ValueFormatException("Неверный тип данных");
-        }
+        return readFields();
     }
 
     protected abstract T readFields();

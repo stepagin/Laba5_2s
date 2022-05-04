@@ -24,8 +24,19 @@ public class Interpreter {
         registerCommand(new InfoCommand(this));
         registerCommand(new ShowCommand(this));
         registerCommand(new RemoveByIdCommand(this));
+        registerCommand(new AddCommand(this));
+        registerCommand(new ExitCommand(this));
+        registerCommand(new UpdateIdCommand(this));
+        registerCommand(new ClearCommand(this));
+        registerCommand(new RemoveLowerCommand(this));
+        registerCommand(new AddIfMaxCommand(this));
+        registerCommand(new HistoryCommand(this));
+        registerCommand(new CountByEyeColor(this));
+        registerCommand(new PrintAscendingCommand(this));
+        registerCommand(new FilterStartsWithNameCommand(this));
+        registerCommand(new SaveCommand(this));
 
-        // TODO: other commands
+        registerCommand(new ExecuteScriptCommand(this));
     }
 
     /**
@@ -38,8 +49,8 @@ public class Interpreter {
             inputManager.setInputFile(scriptPath);
             mode = InterpreterMode.SCRIPT;
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("айайай выводи что не так"); // TODO: what's wrong
+//            e.printStackTrace();
+            outputManager.writeLn(e.getMessage());
             stop();
         }
     }

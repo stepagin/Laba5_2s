@@ -23,7 +23,7 @@ public class LocationReader extends ComplexValueReader<Location> {
         double z = new DoubleReader(inputManager, outputManager, true)
                 .read("координата z");
         String name = new StringReader(inputManager, outputManager, false)
-                .read("name");
+                .read("название локации");
 
         return new Location(x, y, z, name);
     }

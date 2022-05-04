@@ -45,6 +45,6 @@ public class PersonReader extends ComplexValueReader<Person> {
 
     @Override
     protected String getTypeName() {
-        return null;
+        return Person.class.getSimpleName();
     }
 }

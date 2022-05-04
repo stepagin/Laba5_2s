@@ -19,6 +19,8 @@ public class InputManager {
                         new FileInputStream(file)
                 )
         );
+
+
         readMode = ReadMode.file;
     }
 
@@ -28,7 +30,8 @@ public class InputManager {
 
     public boolean hasNext() {
         try {
-            return reader.available() > 0;
+            if (reader.available() > 0 || readMode == ReadMode.console)
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
         }

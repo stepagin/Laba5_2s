@@ -1,6 +1,8 @@
 package ConsoleApplication.Commands;
 
 import ConsoleApplication.Interpreter;
+import ConsoleApplication.readers.ValueFormatException;
+import ConsoleApplication.readers.simpleReaders.IntegerReader;
 
 public class RemoveByIdCommand extends Command{
     public RemoveByIdCommand(Interpreter interpreter) {
@@ -9,7 +11,15 @@ public class RemoveByIdCommand extends Command{
 
     @Override
     public void execute() {
-        // TODO: read id, then remove (success or null)
+        Integer id = new IntegerReader(inputManager, outputManager, false)
+                .setLowerBound(0).read("id");
+        if(collection.get(id) == null) {
+            outputManager.writeLn("Элемент с заданным id не найден");
+        } else {
+            collection.remove(id);
+            outputManager.writeLn("Элемент с id=" + id + " удалён.");
+        }
+
     }
 
     @Override

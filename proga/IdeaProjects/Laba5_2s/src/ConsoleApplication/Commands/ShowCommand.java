@@ -10,8 +10,12 @@ public class ShowCommand extends Command{
 
     @Override
     public void execute() {
-        for (Person person : collection.getAll()) {
-            outputManager.writeLn(person.toString());
+        if (collection.getAll().isEmpty()) {
+            outputManager.writeLn("Коллекция не содержит ни одного элемента");
+        } else {
+            for (Person person : collection.getAll()) {
+                outputManager.writeLn(person.toString());
+            }
         }
     }
 

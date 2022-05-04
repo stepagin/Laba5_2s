@@ -1,7 +1,9 @@
 package ConsoleApplication;
 
 import ConsoleApplication.person.Person;
+import ConsoleApplication.person.eye.Color;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -18,8 +20,13 @@ public class CollectionManager {
         collection.add(element);
     }
 
-    public void remove(Person element){
-        collection.remove(element);
+    public void remove(Integer id){
+        Person p = get(id);
+        collection.remove(p);
+    }
+
+    public void removeLower(Person element){
+        collection.removeIf(person -> person.compareTo(element) < 0);
     }
 
     public String getType() {
@@ -36,5 +43,51 @@ public class CollectionManager {
 
     public LinkedList<Person> getAll() {
         return new LinkedList<>(collection);
+    }
+
+    public Person get(Integer id) {
+        for(Person p : collection){
+            if (((Integer)p.getId()).equals(id)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public void clear() {
+        collection.clear();
+    }
+
+    public Person getMax() {
+        return Collections.max(collection);
+    }
+
+    public int getCountByEyeColor(Color eyeColor) {
+        int sum = 0;
+        for (Person p : collection){
+            if (p.getEyeColor().equals(eyeColor)) {
+                sum += 1;
+            }
+        }
+        return sum;
+    }
+
+    public void saveToFile(String filename) {
+        OutputManager om = new OutputManager();
+        try {
+            om.setOutputFile(filename);
+            String csvLine = toCSV();
+            om.write(csvLine);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String toCSV() {
+        String result = "";
+        for (Person person : collection) {
+            result = result + person.convertToCSV() + '\n';
+        }
+        return result;
     }
 }

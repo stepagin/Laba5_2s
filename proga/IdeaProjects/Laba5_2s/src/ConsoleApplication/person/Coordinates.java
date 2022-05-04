@@ -8,4 +8,24 @@ public class Coordinates {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "(x=" + x +
+                ", y=" + y +
+                ')';
+    }
+    public static int compare(Coordinates a, Coordinates b) {
+        if (a == null) {
+            return b == null ? 0 : -1;
+        } else {
+            if (b == null) {
+                return 1;
+            } else if (Double.compare(a.x, b.x) != 0) {
+                return Double.compare(a.x, b.x);
+            } else {
+                return Double.compare(a.y, a.y);
+            }
+        }
+    }
 }

@@ -2,6 +2,8 @@ package ConsoleApplication.readers;
 
 import ConsoleApplication.InputManager;
 import ConsoleApplication.OutputManager;
+import ConsoleApplication.person.Person;
+import ConsoleApplication.readers.complexReaders.ComplexValueReader;
 
 public abstract class ValueReader<T> {
     protected final InputManager inputManager;
@@ -40,6 +42,12 @@ public abstract class ValueReader<T> {
     }
 
     protected T readAttempt() throws ValueFormatException {
+        try{
+            if (ComplexValueReader.class.isAssignableFrom(getClass())){
+                return parse("");
+            }
+        } catch (Exception e) {}
+
         String res = inputManager.readNext();
         if (res.isEmpty()){
             if (isNullable()){
