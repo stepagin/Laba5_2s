@@ -1,22 +1,24 @@
 package ConsoleApplication;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class OutputManager {
-    private BufferedWriter writer;
+    private DataOutputStream writer;
 
     public OutputManager() {
-        writer = new BufferedWriter(new OutputStreamWriter(System.out));
+        writer = new DataOutputStream(new BufferedOutputStream(System.out));
     }
 
     public  void setOutputFile(String path) throws IOException {
         File file = new File(path);
-        writer = new BufferedWriter(new FileWriter(file));
+        writer = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
     }
 
     public void write(String s){
         try {
-            writer.write(s);
+            byte[] buffer = s.getBytes(StandardCharsets.UTF_8);
+            writer.write(buffer, 0, buffer.length);
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();

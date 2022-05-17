@@ -24,7 +24,7 @@ public class PersonReader extends ComplexValueReader<Person> {
 
     @Override
     protected Person readFields() {
-        Integer id = (int)(System.currentTimeMillis() % Integer.MAX_VALUE);
+        Integer id = (int)(System.currentTimeMillis() % (Integer.MAX_VALUE) / 10000);
         String name = new StringReader(inputManager, outputManager, false)
                 .setCanBeEmpty(false).read("имя");
         Coordinates coordinates = new CoordinatesReader(inputManager, outputManager, false)

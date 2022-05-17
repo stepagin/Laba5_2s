@@ -16,6 +16,10 @@ public abstract class EnumReader<T extends Enum<T>> extends SimpleValueReader<T>
     protected T parse(String argument) throws ValueFormatException {
         try {
             return valueOf(argument);
+        } catch (IllegalArgumentException e) {
+            throw new ValueFormatException("Данное значение не определено. " + getFieldNames());
+        } catch (NullPointerException e) {
+            throw new ValueFormatException("Пустое значение недопустимо. " + getFieldNames());
         } catch (Exception e) {
             throw new ValueFormatException("Некорректное значение. " + getFieldNames());
         }

@@ -11,13 +11,13 @@ public class HelpCommand extends Command{
     @Override
     public void execute() {
         for (Command command : interpreter.getAllCommands()) {
-            outputManager.writeLn(command.getName() + ": " + command.getDescription());
+            outputManager.writeLn(command.getName() + "" + command.getDescription());
         }
     }
 
     @Override
     public String getDescription() {
-        return "вывести справку по доступным командам";
+        return ": вывести справку по доступным командам";
     }
 
     @Override

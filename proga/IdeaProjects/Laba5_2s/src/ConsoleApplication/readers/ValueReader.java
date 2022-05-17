@@ -13,7 +13,7 @@ public abstract class ValueReader<T> {
     public ValueReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
         this.inputManager = inputManager;
         this.outputManager = outputManager;
-        this.canBeNull = canBeNull;
+        setCanBeNull(canBeNull);
     }
 
     public ValueReader(InputManager inputManager, OutputManager outputManager) {

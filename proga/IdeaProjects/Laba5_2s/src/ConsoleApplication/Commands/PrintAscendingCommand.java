@@ -21,7 +21,7 @@ public class PrintAscendingCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "вывести элементы коллекции в порядке возрастания";
+        return ": вывести элементы коллекции в порядке возрастания";
     }
 
     @Override

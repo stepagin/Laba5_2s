@@ -22,7 +22,7 @@ public class AddIfMaxCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции";
+        return " {element} : добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции";
     }
 
     @Override

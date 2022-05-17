@@ -22,7 +22,7 @@ public class HistoryCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "вывести последние 10 команд (без их аргументов)";
+        return ": вывести последние 10 команд (без их аргументов)";
     }
 
     @Override

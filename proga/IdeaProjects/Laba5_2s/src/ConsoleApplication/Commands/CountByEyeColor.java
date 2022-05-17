@@ -17,7 +17,7 @@ public class CountByEyeColor extends Command {
 
     @Override
     public String getDescription() {
-        return "eyeColor : вывести количество элементов, значение поля eyeColor которых равно заданному";
+        return " eyeColor : вывести количество элементов, значение поля eyeColor которых равно заданному";
     }
 
     @Override

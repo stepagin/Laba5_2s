@@ -24,7 +24,7 @@ public class RemoveByIdCommand extends Command{
 
     @Override
     public String getDescription() {
-        return "id: удалить элемент из коллекции по его id";
+        return " id: удалить элемент из коллекции по его id";
     }
 
     @Override

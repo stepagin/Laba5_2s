@@ -75,9 +75,9 @@ public class CollectionManager {
     public void saveToFile(String filename) {
         OutputManager om = new OutputManager();
         try {
-            om.setOutputFile(filename);
-            String csvLine = toCSV();
-            om.write(csvLine);
+            om.setOutputFile(filename); // здесь могут быть ошибки доступа к файлу
+            String csvAllLines = toCSV();
+            om.write(csvAllLines);
         } catch (IOException e) {
             e.printStackTrace();
         }

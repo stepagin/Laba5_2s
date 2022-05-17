@@ -18,7 +18,7 @@ public class RemoveLowerCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "{element} : удалить из коллекции все элементы, меньшие, чем заданный";
+        return " {element} : удалить из коллекции все элементы, меньшие, чем заданный";
     }
 
     @Override

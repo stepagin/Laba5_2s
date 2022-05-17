@@ -32,4 +32,9 @@ public abstract class ComplexValueReader<T> extends ValueReader<T> {
     protected abstract T readFields();
 
     protected abstract String getTypeName();
+
+    @Override
+    protected T readAttempt() throws ValueFormatException {
+        return parse("");
+    }
 }

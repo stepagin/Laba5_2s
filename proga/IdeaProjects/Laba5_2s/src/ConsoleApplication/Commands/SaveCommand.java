@@ -17,7 +17,7 @@ public class SaveCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "filename : сохранить коллекцию в файл";
+        return " filename : сохранить коллекцию в файл";
     }
 
     @Override

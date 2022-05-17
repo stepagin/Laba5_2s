@@ -21,7 +21,7 @@ public class ShowCommand extends Command{
 
     @Override
     public String getDescription() {
-        return "вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
+        return ": вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
     }
 
     @Override

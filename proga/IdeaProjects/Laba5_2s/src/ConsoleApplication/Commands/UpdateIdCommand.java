@@ -26,7 +26,7 @@ public class UpdateIdCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "id {element}: обновить значение элемента коллекции, id которого равен заданному";
+        return " id {element} : обновить значение элемента коллекции, id которого равен заданному";
     }
 
     @Override
