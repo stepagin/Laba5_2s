@@ -54,8 +54,7 @@ public class InputManager {
     public String readAllFile() throws IOException {
         StringBuilder builder = new StringBuilder();
         while (hasNext()) {
-            char c = (char) reader.read();
-            builder.append(c);
+            builder.append(reader.readLine() + '\n');
         }
         return builder.toString();
     }

@@ -26,7 +26,7 @@ public class PersonReader extends ComplexValueReader<Person> {
     protected Person readFields() {
         Integer id = (int)(System.currentTimeMillis() % (Integer.MAX_VALUE) / 10000);
         String name = new StringReader(inputManager, outputManager, false)
-                .setCanBeEmpty(false).read("имя");
+                .setCanBeEmpty(false).setLengthUpperBound(942).read("имя");
         Coordinates coordinates = new CoordinatesReader(inputManager, outputManager, false)
                 .read("координаты");
         ZonedDateTime creationDate = ZonedDateTime.now();
@@ -35,7 +35,7 @@ public class PersonReader extends ComplexValueReader<Person> {
         ConsoleApplication.person.eye.Color eyeColor = new EyeColorReader(inputManager, outputManager, false)
                 .read("цвет глаз");
         ConsoleApplication.person.hair.Color hairColor = new HairColorReader(inputManager, outputManager, false)
-                .read("цвет глаз");
+                .read("цвет волос");
         Country nationality = new CountryReader(inputManager, outputManager, false)
                 .read("национальность");
         Location location = new LocationReader(inputManager, outputManager, false)

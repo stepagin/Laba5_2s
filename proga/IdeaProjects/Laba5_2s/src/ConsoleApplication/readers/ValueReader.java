@@ -21,7 +21,7 @@ public abstract class ValueReader<T> {
     }
 
     public T read(String fieldName) {
-        if (!fieldName.isEmpty()) {
+        if (!fieldName.isEmpty() && !inputManager.hasNext()) {
             outputManager.write("Введите " + fieldName + ": ");
         }
         T result = null;
@@ -42,12 +42,6 @@ public abstract class ValueReader<T> {
     }
 
     protected T readAttempt() throws ValueFormatException {
-        try{
-            if (ComplexValueReader.class.isAssignableFrom(getClass())){
-                return parse("");
-            }
-        } catch (Exception e) {}
-
         String res = inputManager.readNext();
         if (res.isEmpty()){
             if (isNullable()){

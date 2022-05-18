@@ -11,9 +11,19 @@ public class CollectionManager {
     private Set<Person> collection = new LinkedHashSet<>();
     private final LocalDate initializationDate;
 
-
     public CollectionManager() {
         initializationDate = LocalDate.now();
+    }
+
+    public void loadFromFileCSV(String filename) {
+        InputManager inputManager = new InputManager();
+        try {
+            inputManager.setInputFile(filename);
+            String data = inputManager.readAllFile();
+            collection.addAll(new ParserCSV().parse(data));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void add(Person element){

@@ -18,7 +18,7 @@ public class StringReader extends SimpleValueReader<String> {
             throw new ValueFormatException("Эта строка не может быть пустой");
         }
         if (lengthUpperBound != null && Integer.compare(argument.length(), lengthUpperBound) < 1) {
-            throw new ValueFormatException("Длина строки не должна быть больше 942");
+            throw new ValueFormatException("Длина строки не должна быть больше " + lengthUpperBound);
         }
         return argument;
     }

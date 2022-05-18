@@ -63,6 +63,10 @@ public class Interpreter {
         commands.put(command.getName(), command);
     }
 
+    public void readCollectionFromFile(String filename) {
+        collection.loadFromFileCSV(filename);
+    }
+
     /**
      * запуск основного цикла интерпретатора
      */
