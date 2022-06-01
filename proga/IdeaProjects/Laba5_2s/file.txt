@@ -1,26 +1,3 @@
-add
-John123
-12
-11333
-33311
-BLACK
-BLUE
-GERMANY
-101
-102
-103
-Sotka
-add
-Mark
-100500
-500100
-1010
-GREEN
-RED
-USA
-21
-122
-133
-Dacha
+add Aboba 23 32 1 GREEN WHITE USA 1 534 3 ASS
 show
-history
+count_by_eye_color GREEN
