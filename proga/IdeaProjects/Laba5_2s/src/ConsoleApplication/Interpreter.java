@@ -1,7 +1,8 @@
 package ConsoleApplication;
 
-import ConsoleApplication.Commands.*;
+import ConsoleApplication.commands.*;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
@@ -43,13 +44,17 @@ public class Interpreter {
      * конструктор интерпретатора, исполняющего скрипт из файла.
      * @param scriptPath путь к файлу
      */
-    public Interpreter(String scriptPath){
+    public Interpreter(String scriptPath, CollectionManager collection){
         this();
+//        System.out.println(this.collection.toString() + " first");
+//        System.out.println(collection.toString() + " input");
+        this.collection = collection;
+//        System.out.println(this.collection.toString() + " second");
+//        readAndExecuteCommand();
         try {
             inputManager.setInputFile(scriptPath);
             mode = InterpreterMode.SCRIPT;
         } catch (IOException e) {
-//            e.printStackTrace();
             outputManager.writeLn(e.getMessage());
             stop();
         }
@@ -64,13 +69,20 @@ public class Interpreter {
     }
 
     public void readCollectionFromFile(String filename) {
-        collection.loadFromFileCSV(filename);
+        try {
+            collection.loadFromFileCSV(filename);
+        } catch (FileNotFoundException e) {
+            outputManager.writeLn(e.getMessage());
+        } catch (IOException e) {
+            outputManager.writeLn(e.getMessage());
+        }
     }
 
     /**
      * запуск основного цикла интерпретатора
      */
     public void run(){
+        this.stopflag = false;
         while(shouldContinue()){
             readAndExecuteCommand();
         }
@@ -86,9 +98,9 @@ public class Interpreter {
         }
         switch (mode) {
             case SCRIPT:
-                return false;
-            case CONSOLE:
                 return inputManager.hasNext();
+            case CONSOLE:
+                return true;
         }
         return false;
     }
@@ -103,9 +115,14 @@ public class Interpreter {
         if (command == null) {
             outputManager.writeLn("Команда не найдена");
         } else {
-            command.execute();
-            outputManager.writeLn("");
-            history.add(command.getName());
+            try {
+                command.execute();
+                outputManager.writeLn("");
+                history.add(command.getName());
+
+            } catch (IOException e) {
+                outputManager.writeLn(e.getMessage());
+            }
         }
     }
 

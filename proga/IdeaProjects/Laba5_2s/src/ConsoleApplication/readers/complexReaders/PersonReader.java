@@ -26,7 +26,7 @@ public class PersonReader extends ComplexValueReader<Person> {
     protected Person readFields() {
         Integer id = (int)(System.currentTimeMillis() % (Integer.MAX_VALUE) / 10000);
         String name = new StringReader(inputManager, outputManager, false)
-                .setCanBeEmpty(false).setLengthUpperBound(942).read("имя");
+                .setCanBeEmpty(false).read("имя"); //.setLengthUpperBound(942)
         Coordinates coordinates = new CoordinatesReader(inputManager, outputManager, false)
                 .read("координаты");
         ZonedDateTime creationDate = ZonedDateTime.now();

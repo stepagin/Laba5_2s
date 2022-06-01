@@ -2,6 +2,7 @@ package ConsoleApplication;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,10 +11,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        String filepath = System.getenv("lab5_2s_inputFilename");
         Interpreter interpreter = new Interpreter();
-        if( args.length > 0 || true) interpreter.readCollectionFromFile("saved_collection");
+//        interpreter.run();
+        if( filepath != null ) interpreter.readCollectionFromFile(filepath);
         interpreter.run();
-
 
     }
 }

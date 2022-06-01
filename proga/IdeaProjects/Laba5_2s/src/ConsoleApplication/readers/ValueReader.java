@@ -2,8 +2,6 @@ package ConsoleApplication.readers;
 
 import ConsoleApplication.InputManager;
 import ConsoleApplication.OutputManager;
-import ConsoleApplication.person.Person;
-import ConsoleApplication.readers.complexReaders.ComplexValueReader;
 
 public abstract class ValueReader<T> {
     protected final InputManager inputManager;
@@ -21,7 +19,8 @@ public abstract class ValueReader<T> {
     }
 
     public T read(String fieldName) {
-        if (!fieldName.isEmpty() && !inputManager.hasNext()) {
+//        System.out.println(fieldName + ", " + inputManager.ready());
+        if (!fieldName.isEmpty() && !inputManager.ready()) {
             outputManager.write("Введите " + fieldName + ": ");
         }
         T result = null;

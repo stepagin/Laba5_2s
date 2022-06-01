@@ -1,8 +1,9 @@
-package ConsoleApplication.Commands;
+package ConsoleApplication.commands;
 
 import ConsoleApplication.Interpreter;
 import ConsoleApplication.person.Person;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class PrintAscendingCommand extends Command {
@@ -12,7 +13,13 @@ public class PrintAscendingCommand extends Command {
 
     @Override
     public void execute() {
-        LinkedList<Person> list = collection.getAll();;
+        LinkedList<Person> list = collection.getAll();
+        list.sort(new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.compareTo(o2);
+            }
+        });
         outputManager.writeLn("Отсортированный список:");
         for (Person element : list) {
             outputManager.writeLn(element.toString());

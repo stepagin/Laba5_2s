@@ -1,8 +1,7 @@
 package ConsoleApplication;
 
 import java.io.*;
-
-enum ReadMode { console, file }
+enum ReadMode {console, file}
 
 public class InputManager {
     private BufferedReader reader;
@@ -34,6 +33,15 @@ public class InputManager {
         return false;
     }
 
+    public boolean ready() {
+        try {
+            return reader.ready();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public String readNext(){
         StringBuilder stringBuilder = new StringBuilder();
         char c;
@@ -58,4 +66,10 @@ public class InputManager {
         }
         return builder.toString();
     }
+
+    public ReadMode getReadMode() {
+        return readMode;
+    }
+
+
 }

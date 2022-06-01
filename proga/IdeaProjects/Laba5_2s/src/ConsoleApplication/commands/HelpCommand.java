@@ -1,4 +1,4 @@
-package ConsoleApplication.Commands;
+package ConsoleApplication.commands;
 
 
 import ConsoleApplication.Interpreter;

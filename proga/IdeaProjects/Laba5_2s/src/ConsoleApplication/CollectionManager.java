@@ -12,18 +12,16 @@ public class CollectionManager {
     private final LocalDate initializationDate;
 
     public CollectionManager() {
-        initializationDate = LocalDate.now();
+        this.initializationDate = LocalDate.now();
     }
 
-    public void loadFromFileCSV(String filename) {
+    public void loadFromFileCSV(String filename) throws IOException {
         InputManager inputManager = new InputManager();
-        try {
-            inputManager.setInputFile(filename);
-            String data = inputManager.readAllFile();
-            collection.addAll(new ParserCSV().parse(data));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        inputManager.setInputFile(filename);
+        String data = inputManager.readAllFile();
+        collection.addAll(new ParserCSV().parse(data));
+
     }
 
     public void add(Person element){
@@ -61,6 +59,12 @@ public class CollectionManager {
                 return p;
             }
         }
+        for(Person p : collection){
+            if (((Integer)p.getId()).toString().startsWith(id.toString())) {
+                return p;
+            }
+        }
+
         return null;
     }
 
@@ -82,15 +86,11 @@ public class CollectionManager {
         return sum;
     }
 
-    public void saveToFile(String filename) {
+    public void saveToFile(String filename) throws  IOException{
         OutputManager om = new OutputManager();
-        try {
-            om.setOutputFile(filename); // здесь могут быть ошибки доступа к файлу
-            String csvAllLines = toCSV();
-            om.write(csvAllLines);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        om.setOutputFile(filename); // здесь могут быть ошибки доступа к файлу
+        String csvAllLines = toCSV();
+        om.write(csvAllLines);
     }
 
     private String toCSV() {

@@ -1,7 +1,9 @@
-package ConsoleApplication.Commands;
+package ConsoleApplication.commands;
 
 import ConsoleApplication.Interpreter;
 import ConsoleApplication.readers.simpleReaders.StringReader;
+
+import java.io.IOException;
 
 public class SaveCommand extends Command {
     public SaveCommand(Interpreter interpreter) {
@@ -9,8 +11,11 @@ public class SaveCommand extends Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws IOException {
         String filename = new StringReader(inputManager, outputManager, false).read("имя файла");
+        if (!filename.endsWith(".csv")) {
+            filename = filename + ".csv";
+        }
         collection.saveToFile(filename);
         outputManager.writeLn("Коллекция сохранена в файл " + filename);
     }

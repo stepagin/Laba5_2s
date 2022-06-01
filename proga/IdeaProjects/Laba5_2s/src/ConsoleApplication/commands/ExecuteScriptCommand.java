@@ -1,4 +1,4 @@
-package ConsoleApplication.Commands;
+package ConsoleApplication.commands;
 
 import ConsoleApplication.Interpreter;
 import ConsoleApplication.readers.simpleReaders.StringReader;
@@ -12,8 +12,11 @@ public class ExecuteScriptCommand extends Command {
     public void execute() {
         String filename = new StringReader(inputManager, outputManager, false).read("имя файла");
 
-        Interpreter interpreter = new Interpreter(filename);
-        interpreter.run();
+        Interpreter innerInterpreter = new Interpreter(filename, interpreter.getCollection());
+//        System.out.println(interpreter.getCollection().toString());
+        innerInterpreter.run();
+//        System.out.println(innerInterpreter.getCollection() + " fffiirrrst");
+//        System.out.println(interpreter.getCollection() + " сэконд");
     }
 
     @Override
