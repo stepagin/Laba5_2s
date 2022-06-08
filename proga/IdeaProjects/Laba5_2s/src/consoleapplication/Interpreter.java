@@ -13,7 +13,7 @@ enum InterpreterMode { CONSOLE, SCRIPT }
  */
 public class Interpreter {
     private InterpreterMode mode = InterpreterMode.CONSOLE;
-    private final InputManager inputManager = new InputManager();
+    private InputManager inputManager = new InputManager();
     private final OutputManager outputManager = new OutputManager();
     private Map<String, Command> commands = new HashMap<>();
     private final List<String> history = new LinkedList<>();
@@ -98,7 +98,13 @@ public class Interpreter {
         }
         switch (mode) {
             case SCRIPT:
-                return inputManager.hasNext();
+                if (inputManager.hasNext())
+                    return true;
+                else {
+                    mode = InterpreterMode.CONSOLE;
+                    this.inputManager = new InputManager();
+                    return true;
+                }
             case CONSOLE:
                 return true;
         }

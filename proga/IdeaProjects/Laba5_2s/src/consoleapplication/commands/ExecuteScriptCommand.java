@@ -14,6 +14,7 @@ public class ExecuteScriptCommand extends Command {
 
         Interpreter innerInterpreter = new Interpreter(filename, interpreter.getCollection());
 //        System.out.println(interpreter.getCollection().toString());
+//        interpreter.setInputFile(filename);
         innerInterpreter.run();
 //        System.out.println(innerInterpreter.getCollection() + " fffiirrrst");
 //        System.out.println(interpreter.getCollection() + " сэконд");
