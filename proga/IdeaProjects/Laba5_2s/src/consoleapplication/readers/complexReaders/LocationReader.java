@@ -16,8 +16,17 @@ public class LocationReader extends ComplexValueReader<Location> {
 
     @Override
     protected Location readFields() {
-        Long x = new LongReader(inputManager, outputManager, false)
-                .read("координата x");
+        Long x;
+        if (!isNullable()){
+            x = new LongReader(inputManager, outputManager, false)
+                    .read("координата x");
+        } else {
+            x = new LongReader(inputManager, outputManager, true)
+                    .read("координата x");
+            if (x == null){
+                return null;
+            }
+        }
         int y = new IntegerReader(inputManager, outputManager, true)
                 .read("кордината y");
         double z = new DoubleReader(inputManager, outputManager, true)

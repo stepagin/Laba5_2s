@@ -1,3 +1,3 @@
 240370160;John;(x=12, y=1);2022-05-04T12:08:14.759+03:00[Europe/Moscow];178;BLACK;BLUE;GERMANY;Location{'Sotka', (x=101, y=102, z=103.0)}
 240370285;Mark;(x=8888, y=100);2022-05-04T12:08:14.828+03:00[Europe/Moscow];1010;GREEN;RED;USA;Location{'Dacha', (x=21, y=122, z=133.0)}
-45840;add;(x=2, y=3);2022-05-31T21:13:37.750+03:00[Europe/Moscow];123;BROWN;RED;USA;Location{'locans', (x=4, y=4, z=0.4)}
+45840;add;(x=2, y=3);2022-05-31T21:13:37.750+03:00[Europe/Moscow];null;BROWN;RED;USA;Location{'locans', (x=4, y=4, z=0.4)}

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6e95a94-1b36-41ff-aaa2-614e33ea53e3" name="Changes" comment="sdayu 1">
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/CountByEyeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/CountByEyeColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/FilterStartsWithNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/FilterStartsWithNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/HistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/PrintAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/PrintAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/RemoveLowerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/RemoveLowerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/commands/UpdateIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/InputManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/readers/ValueReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/readers/ValueReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/PersonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/PersonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testout.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/CollectionManager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/saved_collection" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/readers/ValueReader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/InputManager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/readers/simpleReaders/StringReader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/Interpreter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/commands/PrintAscendingCommand.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/PersonReader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConsoleApplication/commands/SaveCommand.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/file.txt" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27NM9qfnlIfu6D7WJUx7sV7w08o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\OneDrive - ITMO UNIVERSITY\ITMO\proga\IdeaProjects\Laba5_2s" />
+      <recent name="C:\Users\LENOVO\OneDrive - ITMO UNIVERSITY\ITMO\proga\IdeaProjects\Laba5_2s\src" />
+      <recent name="C:\Users\LENOVO\OneDrive - ITMO UNIVERSITY\ITMO\proga\IdeaProjects\Laba5_2s\src\ConsoleApplication" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ConsoleApplication.Main" />
+      <module name="untitled104" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6e95a94-1b36-41ff-aaa2-614e33ea53e3" name="Changes" comment="" />
+      <created>1649155942139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649155942139</updated>
+    </task>
+    <task id="LOCAL-00001" summary="try 2">
+      <created>1649156334634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649156334634</updated>
+    </task>
+    <task id="LOCAL-00002" summary="19.04.22 21.40 commit">
+      <created>1650394478168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650394478168</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20.04.22 12:05 почти доделал ридеры">
+      <created>1650445496082</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650445496084</updated>
+    </task>
+    <task id="LOCAL-00004" summary="почти доделал commands">
+      <created>1651658122793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651658122793</updated>
+    </task>
+    <task id="LOCAL-00005" summary="переделал ввод и вывод">
+      <created>1652828116198</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652828116198</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sdayu 1">
+      <created>1652864066235</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652864066237</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="try 2" />
+    <MESSAGE value="19.04.22 21.40 commit" />
+    <MESSAGE value="20.04.22 12:05 почти доделал ридеры" />
+    <MESSAGE value="почти доделал commands" />
+    <MESSAGE value="переделал ввод и вывод" />
+    <MESSAGE value="sdayu 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdayu 1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/ComplexValueReader.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/InputManager.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/InputManager.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/InputManager.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/PersonReader.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/ParserCSV.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/readers/complexReaders/PersonReader.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/CollectionManager.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/OutputManager.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/ConsoleApplication/InputManager.java</url>
+          <line>6</line>
+          <properties field="reader" class="ConsoleApplication.InputManager" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

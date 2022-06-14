@@ -37,7 +37,7 @@ public class PersonReader extends ComplexValueReader<Person> {
                 .read("цвет волос");
         Country nationality = new CountryReader(inputManager, outputManager, false)
                 .read("национальность");
-        Location location = new LocationReader(inputManager, outputManager, false)
+        Location location = new LocationReader(inputManager, outputManager, true)
                 .read("локация");
         return new Person(id, name, coordinates, creationDate, height, eyeColor, hairColor, nationality, location);
     }

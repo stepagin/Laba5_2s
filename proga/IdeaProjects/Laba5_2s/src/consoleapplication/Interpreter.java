@@ -46,11 +46,7 @@ public class Interpreter {
      */
     public Interpreter(String scriptPath, CollectionManager collection){
         this();
-//        System.out.println(this.collection.toString() + " first");
-//        System.out.println(collection.toString() + " input");
         this.collection = collection;
-//        System.out.println(this.collection.toString() + " second");
-//        readAndExecuteCommand();
         try {
             inputManager.setInputFile(scriptPath);
             mode = InterpreterMode.SCRIPT;
@@ -123,7 +119,7 @@ public class Interpreter {
         } else {
             try {
                 command.execute();
-                outputManager.writeLn("");
+//                outputManager.writeLn("");
                 history.add(command.getName());
 
             } catch (IOException e) {
