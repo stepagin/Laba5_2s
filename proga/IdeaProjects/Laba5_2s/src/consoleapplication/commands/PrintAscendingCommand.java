@@ -6,6 +6,9 @@ import consoleapplication.person.Person;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+/**
+ * Команда, задача которой вывести элементы коллекции в порядке возрастания
+ */
 public class PrintAscendingCommand extends Command {
     public PrintAscendingCommand(Interpreter interpreter) {
         super(interpreter);

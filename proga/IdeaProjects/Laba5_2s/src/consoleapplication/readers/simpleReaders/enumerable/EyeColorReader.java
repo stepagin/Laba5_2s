@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.person.eye.Color;
 
+/**
+ * Класс, считывающий значение цвета глаз
+ */
 public class EyeColorReader extends EnumReader<Color> {
     public EyeColorReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {
         super(inputManager, outputManager, canBeNull);

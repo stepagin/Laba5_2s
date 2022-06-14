@@ -7,8 +7,7 @@ import consoleapplication.readers.ValueReader;
 
 
 /**
- * Класс для определения правил считывания сложных значений,
- * состоящих из нескольких простых.
+ * Класс для определения правил считывания значений, состоящих из нескольких простых.
  */
 public abstract class ComplexValueReader<T> extends ValueReader<T> {
     public ComplexValueReader(InputManager inputManager, OutputManager outputManager) {

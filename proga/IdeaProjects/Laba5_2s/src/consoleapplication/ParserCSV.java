@@ -13,7 +13,6 @@ import java.util.LinkedList;
  * Парсит коллекцию из .CSV файла
  */
 public class ParserCSV {
-
     public LinkedList<Person> parse(String data) {
         LinkedList<Person> result = new LinkedList<>();
         String[] lines = data.split("\\n|\\r|\\r\\n"); // строки

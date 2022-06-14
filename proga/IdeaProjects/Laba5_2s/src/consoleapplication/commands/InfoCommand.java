@@ -2,6 +2,9 @@ package consoleapplication.commands;
 
 import consoleapplication.Interpreter;
 
+/**
+ * Команда, задача которой вывести информацию о коллекции
+ */
 public class InfoCommand extends Command{
     public InfoCommand(Interpreter interpreter) {
         super(interpreter);

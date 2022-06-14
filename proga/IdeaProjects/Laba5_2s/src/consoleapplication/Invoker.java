@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * Хранит команды и историю выполненых команд
- * Выполняет команды по требованию Интерпретатора
+ * Хранит команды и историю выполненых команд.
+ * Выполняет команды по требованию интерпретатора.
  */
 public class Invoker {
     private final Map<String, Command> commands = new HashMap<>();
@@ -35,10 +35,6 @@ public class Invoker {
 
     }
 
-    /**
-     * Регистрирует команду в Инвокер и делает её доступной для выполнения
-     * @param command - регистрируемая команда
-     */
     private void registerCommand(Command command){
         commands.put(command.getName(), command);
     }

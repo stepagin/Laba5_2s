@@ -3,6 +3,9 @@ package consoleapplication;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Менеджер работы с выводом
+ */
 public class OutputManager {
     private DataOutputStream writer;
 

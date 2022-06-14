@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.readers.ValueFormatException;
 
+/**
+ * Класс, считывающий значение типа Integer
+ */
 public class IntegerReader extends NumberReader<Integer>{
 
     public IntegerReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

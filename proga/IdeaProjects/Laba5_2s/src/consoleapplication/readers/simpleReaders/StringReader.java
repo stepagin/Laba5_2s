@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.readers.ValueFormatException;
 
+/**
+ * Класс для считывания строковых значений
+ */
 public class StringReader extends SimpleValueReader<String> {
     boolean canBeEmpty = true;
     private Integer lengthUpperBound = null;

@@ -3,6 +3,9 @@ package consoleapplication;
 import java.io.*;
 import consoleapplication.readers.simpleReaders.StringReader;
 
+/**
+ * Главный класс
+ */
 public class Main {
 
     public static String read(BufferedReader reader) throws IOException {

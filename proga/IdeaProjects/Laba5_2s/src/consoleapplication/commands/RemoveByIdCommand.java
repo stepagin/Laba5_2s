@@ -3,6 +3,9 @@ package consoleapplication.commands;
 import consoleapplication.Interpreter;
 import consoleapplication.readers.simpleReaders.IntegerReader;
 
+/**
+ * Команда, задача которой удалить элемент из коллекции по его id
+ */
 public class RemoveByIdCommand extends Command{
     public RemoveByIdCommand(Interpreter interpreter) {
         super(interpreter);

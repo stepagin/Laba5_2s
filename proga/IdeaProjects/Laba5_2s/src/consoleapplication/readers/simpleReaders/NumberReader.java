@@ -6,6 +6,7 @@ import consoleapplication.readers.*;
 
 /**
  * Класс для определения правил считывания числовых данных
+ * @param <T> тип числового значения
  */
 public abstract class NumberReader<T extends Number> extends SimpleValueReader<T>{
     T lowerBound = null;

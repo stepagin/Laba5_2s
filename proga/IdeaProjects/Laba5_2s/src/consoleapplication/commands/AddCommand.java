@@ -4,6 +4,9 @@ import consoleapplication.Interpreter;
 import consoleapplication.person.Person;
 import consoleapplication.readers.complexReaders.PersonReader;
 
+/**
+ * Команда, добавляющая элемент в коллекцию
+ */
 public class AddCommand extends Command {
     public AddCommand(Interpreter interpreter) {
         super(interpreter);

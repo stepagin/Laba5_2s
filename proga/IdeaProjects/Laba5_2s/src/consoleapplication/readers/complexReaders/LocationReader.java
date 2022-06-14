@@ -8,6 +8,9 @@ import consoleapplication.readers.simpleReaders.IntegerReader;
 import consoleapplication.readers.simpleReaders.LongReader;
 import consoleapplication.readers.simpleReaders.StringReader;
 
+/**
+ * Класс для считывания значений типа Location
+ */
 public class LocationReader extends ComplexValueReader<Location> {
 
     public LocationReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

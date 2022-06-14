@@ -3,6 +3,9 @@ package consoleapplication.commands;
 import consoleapplication.Interpreter;
 import consoleapplication.person.Person;
 
+/**
+ * Команда, задача которой вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+ */
 public class ShowCommand extends Command{
     public ShowCommand(Interpreter interpreter) {
         super(interpreter);

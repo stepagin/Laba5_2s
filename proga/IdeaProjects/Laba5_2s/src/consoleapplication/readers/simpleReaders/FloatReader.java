@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.readers.ValueFormatException;
 
+/**
+ * Класс, считывающий значение типа Float
+ */
 public class FloatReader extends NumberReader<Float> {
 
     public FloatReader(InputManager inputManager, OutputManager outputManager) {

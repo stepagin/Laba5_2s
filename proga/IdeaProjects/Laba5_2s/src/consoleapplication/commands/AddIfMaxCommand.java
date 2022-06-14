@@ -4,6 +4,9 @@ import consoleapplication.Interpreter;
 import consoleapplication.person.Person;
 import consoleapplication.readers.complexReaders.PersonReader;
 
+/**
+ * Команда, добавляющая элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции
+ */
 public class AddIfMaxCommand extends Command {
     public AddIfMaxCommand(Interpreter interpreter) {
         super(interpreter);

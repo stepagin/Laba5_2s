@@ -3,6 +3,9 @@ package consoleapplication;
 import java.io.*;
 enum ReadMode {console, file}
 
+/**
+ * Менеджер работы с вводом.
+ */
 public class InputManager {
     private BufferedReader reader;
     private ReadMode readMode = ReadMode.console;

@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.readers.ValueFormatException;
 
+/**
+ * Класс, считывающий значение типа Double
+ */
 public class DoubleReader extends  NumberReader<Double> {
 
     public DoubleReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

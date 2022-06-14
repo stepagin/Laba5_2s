@@ -1,5 +1,8 @@
 package consoleapplication.person;
 
+/**
+ * Класс, хранящий значение координат
+ */
 public class Coordinates {
     private Long x; //Значение поля должно быть больше -33, Поле не может быть null
     private Integer y; //Поле не может быть null

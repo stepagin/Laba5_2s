@@ -11,6 +11,9 @@ import consoleapplication.readers.simpleReaders.enumerable.*;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Класс для считывания значений типа Person
+ */
 public class PersonReader extends ComplexValueReader<Person> {
 
     public PersonReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

@@ -5,6 +5,9 @@ import java.io.Serializable;
 import java.lang.*;
 
 
+/**
+ * Класс, хранящий данные о человеке.
+ */
 public class Person implements Comparable<Person>, Serializable {
     private final Integer id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private final String name; //Поле не может быть null, Строка не может быть пустой

@@ -4,6 +4,9 @@ import consoleapplication.Interpreter;
 import consoleapplication.person.eye.Color;
 import consoleapplication.readers.simpleReaders.enumerable.EyeColorReader;
 
+/**
+ * Команда, задача которой вывести количество элементов, значение поля eyeColor которых равно заданному
+ */
 public class CountByEyeColor extends Command {
     public CountByEyeColor(Interpreter interpreter) {
         super(interpreter);

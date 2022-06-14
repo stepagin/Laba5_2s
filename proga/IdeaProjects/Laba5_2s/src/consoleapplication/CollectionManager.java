@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
+/**
+ * Класс, который хранит коллекцию и работает с ней.
+ */
 public class CollectionManager {
     private Set<Person> collection = new LinkedHashSet<>();
     private final LocalDate initializationDate;

@@ -7,6 +7,9 @@ import consoleapplication.OutputManager;
 
 import java.io.IOException;
 
+/**
+ * Абстрактный класс, задающий правила описания классов команд
+ */
 public abstract class Command {
     protected final Interpreter interpreter;
     protected final InputManager inputManager;

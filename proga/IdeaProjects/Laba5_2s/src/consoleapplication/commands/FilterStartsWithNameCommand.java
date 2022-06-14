@@ -6,6 +6,9 @@ import consoleapplication.readers.simpleReaders.StringReader;
 
 import java.util.LinkedList;
 
+/**
+ * Команда, задача которой вывести элементы, значение поля name которых начинается с заданной подстроки.
+ */
 public class FilterStartsWithNameCommand extends Command {
     public FilterStartsWithNameCommand(Interpreter interpreter) {
         super(interpreter);

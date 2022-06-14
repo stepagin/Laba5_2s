@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.person.hair.Color;
 
+/**
+ * Класс, считывающий значение цвета волос
+ */
 public class HairColorReader extends EnumReader<Color> {
 
     public HairColorReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

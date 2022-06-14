@@ -5,6 +5,9 @@ import consoleapplication.person.Person;
 import consoleapplication.readers.complexReaders.PersonReader;
 import consoleapplication.readers.simpleReaders.IntegerReader;
 
+/**
+ * Команда, задача которой обновить значение элемента коллекции, id которого равен заданному.
+ */
 public class UpdateIdCommand extends Command {
     public UpdateIdCommand(Interpreter interpreter) {
         super(interpreter);

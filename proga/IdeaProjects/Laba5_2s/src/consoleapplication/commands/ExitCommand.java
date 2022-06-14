@@ -2,6 +2,9 @@ package consoleapplication.commands;
 
 import consoleapplication.Interpreter;
 
+/**
+ * Команда, которая завершает программу
+ */
 public class ExitCommand extends Command {
     public ExitCommand(Interpreter interpreter) {
         super(interpreter);

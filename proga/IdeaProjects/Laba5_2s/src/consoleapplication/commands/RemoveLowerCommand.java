@@ -4,6 +4,9 @@ import consoleapplication.Interpreter;
 import consoleapplication.person.Person;
 import consoleapplication.readers.complexReaders.PersonReader;
 
+/**
+ * Команда, задача которой удалить из коллекции все элементы, меньшие, чем заданный
+ */
 public class RemoveLowerCommand extends Command {
     public RemoveLowerCommand(Interpreter interpreter) {
         super(interpreter);

@@ -1,5 +1,8 @@
 package consoleapplication.person;
 
+/**
+ * Класс, хранящий значение локации.
+ */
 public class Location {
     private Long x; //Поле не может быть null
     private int y;

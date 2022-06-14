@@ -4,6 +4,9 @@ import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 import consoleapplication.person.Country;
 
+/**
+ * Класс, считывающий значение национальности
+ */
 public class CountryReader extends EnumReader<Country> {
 
     public CountryReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

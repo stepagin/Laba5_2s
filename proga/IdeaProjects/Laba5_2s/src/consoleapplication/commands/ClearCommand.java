@@ -2,6 +2,9 @@ package consoleapplication.commands;
 
 import consoleapplication.Interpreter;
 
+/**
+ * Команда, которая очищает коллекцию
+ */
 public class ClearCommand extends Command {
     public ClearCommand(Interpreter interpreter) {
         super(interpreter);

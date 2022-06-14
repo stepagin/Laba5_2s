@@ -5,6 +5,10 @@ import consoleapplication.OutputManager;
 import consoleapplication.readers.ValueFormatException;
 import consoleapplication.readers.simpleReaders.SimpleValueReader;
 
+/**
+ * Класс, определяющий правила считывания перечисляемых значений
+ * @param <T> тип значений
+ */
 public abstract class EnumReader<T extends Enum<T>> extends SimpleValueReader<T> {
 
     protected EnumReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

@@ -5,6 +5,9 @@ import consoleapplication.Interpreter;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * Команда, задача которой вывести последние 10 команд
+ */
 public class HistoryCommand extends Command {
     public HistoryCommand(Interpreter interpreter) {
         super(interpreter);

@@ -6,6 +6,9 @@ import consoleapplication.person.Coordinates;
 import consoleapplication.readers.simpleReaders.IntegerReader;
 import consoleapplication.readers.simpleReaders.LongReader;
 
+/**
+ * Класс для считывания значений типа Coordinates
+ */
 public class CoordinatesReader extends ComplexValueReader<Coordinates> {
 
     public CoordinatesReader(InputManager inputManager, OutputManager outputManager, boolean canBeNull) {

@@ -5,6 +5,9 @@ import consoleapplication.readers.simpleReaders.StringReader;
 
 import java.io.IOException;
 
+/**
+ * Команда, задача которой сохранить коллекцию в файл
+ */
 public class SaveCommand extends Command {
     public SaveCommand(Interpreter interpreter) {
         super(interpreter);

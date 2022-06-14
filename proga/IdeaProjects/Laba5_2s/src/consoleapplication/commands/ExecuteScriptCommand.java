@@ -3,6 +3,9 @@ package consoleapplication.commands;
 import consoleapplication.Interpreter;
 import consoleapplication.readers.simpleReaders.StringReader;
 
+/**
+ * Команда, задача которой считать и исполнить скрипт из указанного файла.
+ */
 public class ExecuteScriptCommand extends Command {
     public ExecuteScriptCommand(Interpreter interpreter) {
         super(interpreter);
