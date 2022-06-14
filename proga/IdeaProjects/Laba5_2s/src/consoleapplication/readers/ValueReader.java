@@ -3,6 +3,10 @@ package consoleapplication.readers;
 import consoleapplication.InputManager;
 import consoleapplication.OutputManager;
 
+/**
+ * задаёт правила считывания
+ * @param <T> тип возвращаемого значения
+ */
 public abstract class ValueReader<T> {
     protected final InputManager inputManager;
     protected final OutputManager outputManager;
@@ -18,9 +22,13 @@ public abstract class ValueReader<T> {
         this(inputManager, outputManager, true);
     }
 
+    /**
+     * метод, считывающий из inputManager
+     * @param fieldName название считываемого значение, которое выведется пользователю
+     * @return тип, указаный при создании класса
+     */
     public T read(String fieldName) {
-//        System.out.println(fieldName + ", " + inputManager.ready());
-        if (!fieldName.isEmpty() && !inputManager.ready()) {
+        if (!fieldName.isEmpty() && !inputManager.ready()) { // проверяет, что указано имя считываемого поля и дальше нечего считывать
             outputManager.write("Введите " + fieldName + ": ");
         }
         T result = null;
@@ -41,7 +49,7 @@ public abstract class ValueReader<T> {
     }
 
     protected T readAttempt() throws ValueFormatException {
-        String res = inputManager.readNext();
+        String res = inputManager.readNext().trim();
         if (res.isEmpty()){
             if (isNullable()){
                 return null;
@@ -53,6 +61,12 @@ public abstract class ValueReader<T> {
         }
     }
 
+    /**
+     * преобразует строку в тип, указаный при создании класса
+     * @param argument исходная строка
+     * @return преобразованный тип
+     * @throws ValueFormatException если входное значение не корректно
+     */
     abstract protected T parse(String argument) throws ValueFormatException;
 
     public boolean isNullable(){

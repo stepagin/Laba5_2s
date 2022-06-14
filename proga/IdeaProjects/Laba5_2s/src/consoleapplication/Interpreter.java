@@ -1,6 +1,7 @@
 package consoleapplication;
 
 import consoleapplication.commands.*;
+import consoleapplication.person.Person;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,43 +14,24 @@ enum InterpreterMode { CONSOLE, SCRIPT }
  */
 public class Interpreter {
     private InterpreterMode mode = InterpreterMode.CONSOLE;
-    private InputManager inputManager = new InputManager();
+    private final InputManager inputManager = new InputManager();
     private final OutputManager outputManager = new OutputManager();
-    private Map<String, Command> commands = new HashMap<>();
-    private final List<String> history = new LinkedList<>();
     private CollectionManager collection = new CollectionManager();
     private boolean stopflag = false;
+    private final Invoker invoker; // NEW!!!
 
     public Interpreter() {
-        registerCommand(new HelpCommand(this));
-        registerCommand(new InfoCommand(this));
-        registerCommand(new ShowCommand(this));
-        registerCommand(new RemoveByIdCommand(this));
-        registerCommand(new AddCommand(this));
-        registerCommand(new ExitCommand(this));
-        registerCommand(new UpdateIdCommand(this));
-        registerCommand(new ClearCommand(this));
-        registerCommand(new RemoveLowerCommand(this));
-        registerCommand(new AddIfMaxCommand(this));
-        registerCommand(new HistoryCommand(this));
-        registerCommand(new CountByEyeColor(this));
-        registerCommand(new PrintAscendingCommand(this));
-        registerCommand(new FilterStartsWithNameCommand(this));
-        registerCommand(new SaveCommand(this));
-
-        registerCommand(new ExecuteScriptCommand(this));
+        this.invoker = new Invoker(this);
     }
 
-    /**
-     * конструктор интерпретатора, исполняющего скрипт из файла.
-     * @param scriptPath путь к файлу
-     */
-    public Interpreter(String scriptPath, CollectionManager collection){
-        this();
+
+    public Interpreter(String scriptpath, CollectionManager collection) {
         this.collection = collection;
+        this.invoker = new Invoker(this);
+//        System.out.println(this.collection.getAll());
+        this.mode = InterpreterMode.SCRIPT;
         try {
-            inputManager.setInputFile(scriptPath);
-            mode = InterpreterMode.SCRIPT;
+            inputManager.setInputFile(scriptpath);
         } catch (IOException e) {
             outputManager.writeLn(e.getMessage());
             stop();
@@ -57,30 +39,23 @@ public class Interpreter {
     }
 
     /**
-     * Регистрирует команду
-     * @param command - регистрируемая команда
+     * запуск основного цикла интерпретатора
      */
-    private void registerCommand(Command command){
-        commands.put(command.getName(), command);
+    public void run(){
+        while(shouldContinue()){
+            readAndExecuteCommand();
+        }
     }
 
     public void readCollectionFromFile(String filename) {
         try {
             collection.loadFromFileCSV(filename);
+            outputManager.writeLn("Загружена коллекция из файла " + filename);
         } catch (FileNotFoundException e) {
+            outputManager.writeLn("Не удалось найти файл с коллекцией");
             outputManager.writeLn(e.getMessage());
         } catch (IOException e) {
             outputManager.writeLn(e.getMessage());
-        }
-    }
-
-    /**
-     * запуск основного цикла интерпретатора
-     */
-    public void run(){
-        this.stopflag = false;
-        while(shouldContinue()){
-            readAndExecuteCommand();
         }
     }
 
@@ -94,58 +69,40 @@ public class Interpreter {
         }
         switch (mode) {
             case SCRIPT:
-                if (inputManager.hasNext())
-                    return true;
-                else {
-                    mode = InterpreterMode.CONSOLE;
-                    this.inputManager = new InputManager();
-                    return true;
-                }
+                return inputManager.hasNext();
             case CONSOLE:
                 return true;
         }
         return false;
     }
 
+    /**
+     * Остановка основного цикла интерпретатора
+     */
     public void stop(){
         stopflag = true;
     }
 
 
     private void readAndExecuteCommand(){
-        Command command = readCommand();
-        if (command == null) {
-            outputManager.writeLn("Команда не найдена");
-        } else {
-            try {
-                command.execute();
-//                outputManager.writeLn("");
-                history.add(command.getName());
-
-            } catch (IOException e) {
-                outputManager.writeLn(e.getMessage());
-            }
-        }
+        String command = readCommand();
+        invoker.executeCommand(command);
     }
 
-    private Command readCommand(){
+    private String readCommand(){
         String name;
         do {
             name = inputManager.readNext().trim();
         } while (name.isEmpty());
-        return getCommandByName(name);
-    }
-
-    public Command getCommandByName(String name){
-        return commands.get(name.trim());
+        return name;
     }
 
     public Collection<Command> getAllCommands(){
-        return commands.values();
+        return invoker.getAllCommands();
     }
 
     public List<String> getHistory() {
-        return history;
+        return invoker.getHistory();
     }
 
     public InputManager getInputManager() {

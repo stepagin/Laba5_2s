@@ -1,3 +1,4 @@
 add Aboba 23 32 1 GREEN WHITE USA 1 534 3 ASS
 show
 count_by_eye_color GREEN
+history

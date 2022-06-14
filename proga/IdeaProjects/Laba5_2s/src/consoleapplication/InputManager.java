@@ -14,8 +14,6 @@ public class InputManager {
     public void setInputFile(String filepath) throws IOException {
         File file = new File(filepath);
         this.reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-
-
         readMode = ReadMode.file;
     }
 
@@ -65,10 +63,6 @@ public class InputManager {
             builder.append(reader.readLine() + '\n');
         }
         return builder.toString();
-    }
-
-    public ReadMode getReadMode() {
-        return readMode;
     }
 
 

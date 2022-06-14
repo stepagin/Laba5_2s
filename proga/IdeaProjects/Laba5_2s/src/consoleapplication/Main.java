@@ -19,6 +19,5 @@ public class Main {
         Interpreter interpreter = new Interpreter();
         if (filepath != null) interpreter.readCollectionFromFile(filepath);
         interpreter.run();
-
     }
 }

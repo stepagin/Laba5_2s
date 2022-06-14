@@ -6,15 +6,15 @@ import java.lang.*;
 
 
 public class Person implements Comparable<Person>, Serializable {
-    private Integer id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    private String name; //Поле не может быть null, Строка не может быть пустой
-    private Coordinates coordinates; //Поле не может быть null
-    private java.time.ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private Long height; //Поле может быть null, Значение поля должно быть больше 0
-    private consoleapplication.person.eye.Color eyeColor; //Поле не может быть null
-    private consoleapplication.person.hair.Color hairColor; //Поле не может быть null
-    private Country nationality; //Поле не может быть null
-    private Location location; //Поле может быть null
+    private final Integer id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private final String name; //Поле не может быть null, Строка не может быть пустой
+    private final Coordinates coordinates; //Поле не может быть null
+    private final java.time.ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private final Long height; //Поле может быть null, Значение поля должно быть больше 0
+    private final consoleapplication.person.eye.Color eyeColor; //Поле не может быть null
+    private final consoleapplication.person.hair.Color hairColor; //Поле не может быть null
+    private final Country nationality; //Поле не может быть null
+    private final Location location; //Поле может быть null
 
     public Person(int id, String name, Coordinates coordinates, java.time.ZonedDateTime creationDate, Long height,
                   consoleapplication.person.eye.Color eyeColor, consoleapplication.person.hair.Color hairColor,
@@ -40,13 +40,13 @@ public class Person implements Comparable<Person>, Serializable {
         return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", coordinates=" + coordinates.toString() +
+                ", coordinates=" + coordinates +
                 ", creationDate=" + creationDate +
                 ", height=" + height +
                 ", eyeColor=" + eyeColor +
                 ", hairColor=" + hairColor +
                 ", nationality=" + nationality +
-                ", location=" + location.toString() +
+                ", location=" + location +
                 '}';
     }
 

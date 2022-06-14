@@ -13,6 +13,7 @@ public class ShowCommand extends Command{
         if (collection.getAll().isEmpty()) {
             outputManager.writeLn("Коллекция не содержит ни одного элемента");
         } else {
+//            System.out.println(collection.getAll());
             for (Person person : collection.getAll()) {
                 outputManager.writeLn(person.toString());
             }

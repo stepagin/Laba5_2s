@@ -27,13 +27,12 @@ public class LocationReader extends ComplexValueReader<Location> {
                 return null;
             }
         }
-        int y = new IntegerReader(inputManager, outputManager, true)
+        int y = new IntegerReader(inputManager, outputManager, false)
                 .read("кордината y");
-        double z = new DoubleReader(inputManager, outputManager, true)
+        double z = new DoubleReader(inputManager, outputManager, false)
                 .read("координата z");
         String name = new StringReader(inputManager, outputManager, false)
                 .read("название локации");
-
         return new Location(x, y, z, name);
     }
 
