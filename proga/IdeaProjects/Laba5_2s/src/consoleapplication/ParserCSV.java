@@ -35,7 +35,12 @@ public class ParserCSV {
 
                 ZonedDateTime creationDate = ZonedDateTime.parse(columns[3]);
 
-                Long height = Long.parseLong(columns[4]);
+                Long height;
+                try {
+                    height = Long.parseLong(columns[4]);
+                } catch (Exception e) {
+                    height = null;
+                }
 
                 consoleapplication.person.eye.Color eyeColor = Color.valueOf(columns[5]);
 
@@ -43,21 +48,27 @@ public class ParserCSV {
 
                 Country nationality = Country.valueOf(columns[7]);
 
-                // parsing location
-                String locationData = columns[8].substring(9, columns[8].length() - 1);
-                String locationName = null;
-                for(int j = 1; j < locationData.length(); ++j){
-                    if(locationData.charAt(j) == '\'') {
-                        locationName = locationData.substring(1, j);
-                        locationData = locationData.substring(j+1);
-                        break;
+                Location location;
+                try {
+                    // parsing location
+                    String locationData = columns[8].substring(9, columns[8].length() - 1);
+                    String locationName = null;
+                    for(int j = 1; j < locationData.length(); ++j){
+                        if(locationData.charAt(j) == '\'') {
+                            locationName = locationData.substring(1, j);
+                            locationData = locationData.substring(j+1);
+                            break;
+                        }
                     }
+                    String[] locationNumbers = locationData.split("(?!\\.)(?:\\D+)"); // оставить только числа
+                    Long locationCoordinateX = Long.parseLong(locationNumbers[1]);
+                    Integer locationCoordinateY = Integer.parseInt(locationNumbers[2]);
+                    Double locationCoordinateZ = Double.parseDouble(locationNumbers[3]);
+                    location = new Location(locationCoordinateX, locationCoordinateY, locationCoordinateZ, locationName);
+                } catch (Exception e) {
+                    location = null;
                 }
-                String[] locationNumbers = locationData.split("(?!\\.)(?:\\D+)"); // оставить только числа
-                Long locationCoordinateX = Long.parseLong(locationNumbers[1]);
-                Integer locationCoordinateY = Integer.parseInt(locationNumbers[2]);
-                Double locationCoordinateZ = Double.parseDouble(locationNumbers[3]);
-                Location location = new Location(locationCoordinateX, locationCoordinateY, locationCoordinateZ, locationName);
+
 
                 Person p = new Person(id, name, new Coordinates(coordinatesX, coordinatesY), creationDate, height,
                         eyeColor, hairColor, nationality, location);

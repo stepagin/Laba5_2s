@@ -34,8 +34,8 @@ public class Person implements Comparable<Person>, Serializable {
     }
 
     public String convertToCSV() {
-        return "" + id + ';' + name + ';' + coordinates.toString() + ';' + creationDate + ';' +
-                height + ';' + eyeColor + ';' + hairColor + ';' + nationality + ';' + location.toString();
+        return "" + id + ';' + name + ';' + coordinates + ';' + creationDate + ';' +
+                height + ';' + eyeColor + ';' + hairColor + ';' + nationality + ';' + location;
     }
 
     @Override

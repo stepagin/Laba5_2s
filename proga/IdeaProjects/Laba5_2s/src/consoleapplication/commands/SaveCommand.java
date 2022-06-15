@@ -14,13 +14,18 @@ public class SaveCommand extends Command {
     }
 
     @Override
-    public void execute() throws IOException {
+    public void execute() {
         String filename = new StringReader(inputManager, outputManager, false).read("имя файла");
         if (!filename.endsWith(".csv")) {
             filename = filename + ".csv";
         }
-        collection.saveToFile(filename);
-        outputManager.writeLn("Коллекция сохранена в файл " + filename);
+        try {
+            collection.saveToFile(filename);
+            outputManager.writeLn("Коллекция сохранена в файл " + filename);
+        } catch (IOException e) {
+            outputManager.writeLn("Не удалось сохранить коллекцию.");
+            outputManager.writeLn(e.getMessage());
+        }
     }
 
     @Override
